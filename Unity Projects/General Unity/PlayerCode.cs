@@ -32,12 +32,12 @@ public class PlayerCode : MonoBehaviour
         float horizontalInput = Input.GetAxis("Horizontal");
 
         // if the player presses the left arrow key or 'A' key, move left
-        if (moveInput < 0)
+        if (horizontalInput < 0)
         {
             transform.Translate(Vector2.left * speed * Time.deltaTime);
         }
         // if the player presses the right arrow key or 'D' key, move right
-        else if (moveInput > 0)
+        else if (horizontalInput > 0)
         {
             transform.Translate(Vector2.right * speed * Time.deltaTime);
         }
