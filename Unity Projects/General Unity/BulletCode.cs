@@ -22,7 +22,7 @@ public class BulletCode : MonoBehaviour
     void Update()
     {
         // Move the bullet forward at the specified speed
-        transform.Translate(_______.__ * _____ * Time.deltaTime);
+        // transform.Translate(_______.__ * _____ * Time.deltaTime);
     }
 
     void OnTriggerEnter2D(Collider2D other)
