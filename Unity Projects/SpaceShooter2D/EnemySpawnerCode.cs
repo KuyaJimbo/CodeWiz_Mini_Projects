@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemySpawner : MonoBehaviour
+public class EnemySpawnerCode : MonoBehaviour
 {
     // References and settings
     public GameObject enemyPrefab;        // Drag your enemy prefab here in the Inspector
