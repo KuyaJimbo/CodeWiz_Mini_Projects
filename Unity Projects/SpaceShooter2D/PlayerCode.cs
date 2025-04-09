@@ -9,14 +9,14 @@ using UnityEngine;
 
 public class PlayerCode : MonoBehaviour
 {
-    // Access_Type  Data_Type   Variable_Name;
-    public float speed;
+    // HOW TO CREATE A VARIABLE:
+    // Variables have 3 parts:
+    // Access_Type   Data_Type   Variable_Name;
 
-    // * CHALLENGE 1: Create a PUBLIC variable for the SCORE and make sure it is an integer (INT)
-    ______ __________ score;
+    public float speed; // Speed of the player
+    public float horizontalInput; // Input value for movement
 
-    // * CHALLENGE 3: Create a PUBLIC variable for the BULLET_PREFAB and make sure it is a GameObject
-    // ______ __________ bulletPrefab;
+    // *** CHALLENGE 1: Create a PUBLIC variable for the verticalInput and make sure it is a FLOAT ***
 
 
     // Start is called before the first frame update
