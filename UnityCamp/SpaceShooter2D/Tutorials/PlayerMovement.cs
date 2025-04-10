@@ -12,11 +12,13 @@ public class PlayerMovement : MonoBehaviour
 
     // Here's how we create a PUBLIC SPEED variable (Float is a decimal number)
     public float speed;
+
     // Here's how we create a PRIVATE HORIZONTALINPUT variable (Float is a decimal number)
     private float horizontalInput;
 
-
     // CHALLENGE 1: Create a PRIVATE VERTICALINPUT variable as a float
+    // Example: private float verticalInput;
+
     /* -- ENTER YOUR CODE HERE -- */
 
     // Start is called before the first frame update
@@ -48,5 +50,6 @@ public class PlayerMovement : MonoBehaviour
         // verticalInput = Input.GetAxis("_______");
         // Move the player up/down based on vertical input
         // transform.Translate(Vector2.up * _____________ * _____ * Time.deltaTime);
+
     }
 }

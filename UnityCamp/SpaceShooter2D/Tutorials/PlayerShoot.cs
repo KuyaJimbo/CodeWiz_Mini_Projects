@@ -12,8 +12,10 @@ public class PlayerShoot : MonoBehaviour
 
     // Prefabs are pre-made game objects that we can use in our game.
     // Challenge 1: Create a PUBLIC BULLETPREFAB variable (Data Type: GameObject)
+    // public GameObject bulletPrefab;
 
     /* -- ENTER YOUR CODE HERE -- */
+
 
     // Audio clips are sound files that we can play in our game.
     // Challenge 2: Create a PUBLIC enemyDestroyedSound variable (Data Type: AudioClip)

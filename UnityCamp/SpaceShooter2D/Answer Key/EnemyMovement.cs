@@ -14,6 +14,7 @@ public class EnemyMovement : MonoBehaviour
     // Example: public float speed;
 
     /* -- ENTER YOUR CODE HERE -- */
+    public float speed;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +27,13 @@ public class EnemyMovement : MonoBehaviour
         //     speed = 5f;
         // }
 
+        /* -- ENTER YOUR CODE HERE -- */
+        if (speed == 0)
+        {
+            // Give a Default value
+            speed = 5f;
+        }
+
     }
 
     // Update is called once per frame
@@ -36,5 +44,18 @@ public class EnemyMovement : MonoBehaviour
         // Example: transform.Translate(Vector2.down * speed * Time.deltaTime);
 
         /* -- ENTER YOUR CODE HERE -- */
+        transform.Translate(Vector2.down * speed * Time.deltaTime);
+
+        // -- DESTROY THE ENEMY IF IT GOES OFF SCREEN --
+        // if (transform.position.y < -6)
+        // {
+        //     Destroy(gameObject);
+        // }
+
+        /* -- ENTER YOUR CODE HERE -- */
+        if (transform.position.y < -6)
+        {
+            Destroy(gameObject);
+        }
     }
 }
