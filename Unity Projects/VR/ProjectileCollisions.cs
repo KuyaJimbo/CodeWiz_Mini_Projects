@@ -12,12 +12,12 @@ public class ProjectileCollisions : MonoBehaviour
         Destroy(gameObject, projectileLifetime);
     }
     
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter(Collision collision)
     {
         HandleCollision(collision.gameObject);
     }
     
-    private void OnTriggerEnter2D(Collider2D collider)
+    private void OnTriggerEnter(Collider collider)
     {
         HandleCollision(collider.gameObject);
     }
