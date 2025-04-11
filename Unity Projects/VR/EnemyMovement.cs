@@ -7,12 +7,12 @@ public class EnemyMovement : MonoBehaviour
     public float detectionRange = 10f;
     
     private Transform player;
-    private Rigidbody2D rb;
+    private Rigidbody rb;
     private bool playerDetected = false;
     
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody>();
         // Find the player by tag
         GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
         if (playerObject != null)
@@ -38,7 +38,7 @@ public class EnemyMovement : MonoBehaviour
         }
         
         // Calculate distance to player
-        float distanceToPlayer = Vector2.Distance(transform.position, player.position);
+        float distanceToPlayer = Vector3.Distance(transform.position, player.position);
         
         // Check if player is within detection range
         if (distanceToPlayer <= detectionRange)
@@ -56,19 +56,22 @@ public class EnemyMovement : MonoBehaviour
         if (playerDetected && player != null)
         {
             // Get direction to player
-            Vector2 direction = (player.position - transform.position).normalized;
+            Vector3 direction = (player.position - transform.position).normalized;
             
             // Move towards player
             rb.velocity = direction * moveSpeed;
             
             // Optional: rotate to face player
-            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90f;
-            rb.rotation = angle;
+            if (direction != Vector3.zero)
+            {
+                Quaternion lookRotation = Quaternion.LookRotation(direction);
+                transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
+            }
         }
         else
         {
             // Stop moving if player not detected
-            rb.velocity = Vector2.zero;
+            rb.velocity = Vector3.zero;
         }
     }
     
