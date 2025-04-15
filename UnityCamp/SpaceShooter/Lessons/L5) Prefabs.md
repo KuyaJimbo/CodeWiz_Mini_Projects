@@ -1,5 +1,5 @@
 
-# L5) Prefabs!
+# L5) Prefabs
 
 This tutorial demonstrates how to create Prefabs in Unity
 
