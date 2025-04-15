@@ -66,4 +66,4 @@ private float horizontalInput;
 ## Now test out your game by clicking the Play  Button
 **Input Controls:**
  - WASD
- - Arrow Keyes
+ - Arrow Keys
