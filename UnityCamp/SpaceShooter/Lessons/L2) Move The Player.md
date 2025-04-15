@@ -35,7 +35,7 @@ private float horizontalInput;
 	{
     	// -- GIVE SPEED A DEFAULT VALUE --
     	if (speed == 0)
-	    {
+	{
     		// Give a Default value
 	    	speed = 5f;
     	}
