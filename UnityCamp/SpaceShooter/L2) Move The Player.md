@@ -47,7 +47,7 @@ public class PlayerMovement : MonoBehaviour
     // Example: private float verticalInput;
 
 ```csharp
-    private float verticalInput;
+private float verticalInput;
 ```
 
     // Start is called before the first frame update
@@ -78,13 +78,13 @@ public class PlayerMovement : MonoBehaviour
         // Get the vertical input (W/S keys or up/down arrow keys)
 
 ```csharp
-        verticalInput = Input.GetAxis("Vertical");
+verticalInput = Input.GetAxis("Vertical");
 ```
 
         // Move the player up/down based on vertical input
 
 ```csharp
-        transform.Translate(Vector2.up * verticalInput * speed * Time.deltaTime);
+transform.Translate(Vector2.up * verticalInput * speed * Time.deltaTime);
 ```
 
     }
