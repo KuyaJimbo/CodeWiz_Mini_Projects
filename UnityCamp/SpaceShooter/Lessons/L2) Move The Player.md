@@ -62,3 +62,8 @@ private float horizontalInput;
 	    // Move the player up/down based on vertical input
 	    transform.Translate(Vector2.up * verticalInput * speed * Time.deltaTime); 
 	}
+
+## Now test out your game by clicking the Play  Button
+**Input Controls:**
+ - WASD
+ - Arrow Keyes
