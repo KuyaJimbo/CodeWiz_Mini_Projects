@@ -28,6 +28,7 @@ private float horizontalInput;
 
     private float verticalInput;
 
+
 ### // Start is called before the first frame update
 
     void Start()
@@ -40,6 +41,7 @@ private float horizontalInput;
     	}
     }
 
+
 ### // Update is called once per frame
 
     void Update()
@@ -50,15 +52,12 @@ private float horizontalInput;
 	    // --- CONTROL HORIZONTAL MOVEMENT --- 
 	    // Get the horizontal input (A/D keys or left/right arrow keys)
 	    horizontalInput = Input.GetAxis("Horizontal");
-	    
 	    // Move the player left/right based on horizontal input
 	    transform.Translate(Vector2.right * horizontalInput * speed * Time.deltaTime);
 	    
 	    // --- CONTROL  VERTICAL  MOVEMENT --- 
 	    // Get the vertical input (W/S keys or up/down arrow keys)
 	    verticalInput = Input.GetAxis("Vertical");
-	    
 	    // Move the player up/down based on vertical input
-	    transform.Translate(Vector2.up * verticalInput * speed * Time.deltaTime);
-	    
+	    transform.Translate(Vector2.up * verticalInput * speed * Time.deltaTime); 
 	}
