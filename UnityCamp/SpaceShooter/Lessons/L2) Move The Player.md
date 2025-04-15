@@ -1,4 +1,5 @@
 
+
 # L2) Move the Player
 ## Add the Player Movement Script to the Player Object
 1) Select the **Player Object** in the **Scene**
@@ -35,9 +36,9 @@ private float horizontalInput;
 	{
     	// -- GIVE SPEED A DEFAULT VALUE --
     	if (speed == 0)
-	{
-    		// Give a Default value
-	    	speed = 5f;
+		{
+	    	// Give a Default value
+		    speed = 5f;
     	}
     }
 
