@@ -4,7 +4,7 @@ This tutorial demonstrates how to create Game Objects in Unity
 
 ## Use a Triangle Game Object for the Player
 
-1. In the _Hierarchy_, add a Triangle Game Object:
+1. In the **Hierarchy**, add a Triangle Game Object:
 
 - 2D Object > Sprites > Triangle
 
@@ -40,3 +40,5 @@ There are 2 ways to change the Position:
 5. Select your **Triangle** Object in the **Scene**
 6. Select the **Sprite Renderer** in the **Inspector**
 7. Click and Drag your **design** into the **Sprite** Field
+
+To **resize** your design, try using the **Transform Component** in the Inspector or the **Tools** in the Scene
