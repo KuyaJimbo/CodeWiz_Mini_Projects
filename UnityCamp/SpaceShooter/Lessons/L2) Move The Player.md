@@ -69,4 +69,4 @@ private float horizontalInput;
 **Input Controls:**
 
 - WASD
-- Arrow Keyes
+- Arrow Keys
