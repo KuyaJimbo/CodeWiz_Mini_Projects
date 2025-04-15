@@ -37,9 +37,9 @@ public class ProjectileMovement : MonoBehaviour
     	    speed = 5f;
     	}
      
-        // -- SET BULLET DESTROY TIME --
-        // Let's destroy the bullet after 3 seconds so it does not go off-screen
-        Destroy(gameObject, 3f);
+            // -- SET BULLET DESTROY TIME --
+            // Let's destroy the bullet after 3 seconds so it does not go off-screen
+            Destroy(gameObject, 3f);
     }
 
 ### // Update is called once per frame
@@ -47,9 +47,9 @@ public class ProjectileMovement : MonoBehaviour
     void Update()
     {
 
-        // --- CONTROL BULLET MOVEMENT --- 
-        // Move the bullet forward based on SPEED
-        transform.Translate(Vector2.up * speed * Time.deltaTime);
+            // --- CONTROL BULLET MOVEMENT --- 
+            // Move the bullet forward based on SPEED
+            transform.Translate(Vector2.up * speed * Time.deltaTime);
     }
 
 ## Now test out your game by clicking the Play Button
