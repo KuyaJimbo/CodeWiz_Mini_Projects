@@ -47,8 +47,8 @@ public class PlayerCollision : MonoBehaviour
             /* -- ENTER YOUR CODE HERE -- */
 
 
-            // Challenge 5: Destroy this player object after 3 seconds
-            // Example: Destroy(gameObject, 3f);
+            // Challenge 5: Destroy this player object
+            // Example: Destroy(gameObject);
 
             /* -- ENTER YOUR CODE HERE -- */
 

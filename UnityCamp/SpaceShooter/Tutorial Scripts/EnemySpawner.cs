@@ -77,7 +77,6 @@ public class EnemySpawner : MonoBehaviour
 
         /* -- ENTER YOUR CODE HERE -- */
 
-
     }
 
     // Update is called once per frame
@@ -104,7 +103,7 @@ public class EnemySpawner : MonoBehaviour
 
             // 3) Spawn an enemy at the spawner's position 
             // INSTANTIATE creates a GAMEOBJECT at a POSITION with a ROTATION (with enemySpawnAngle)
-            // Example: Instantiate(enemyPrefab, new Vector2(enemySpawnX, 6f), Quaternion.identity + Quaternion.Euler(0, 0, enemySpawnAngle));
+            // Example: Instantiate(enemyPrefab, new Vector2(enemySpawnX, 6f), Quaternion.Euler(0, 0, enemySpawnAngle));
 
             /* -- ENTER YOUR CODE HERE -- */
 
