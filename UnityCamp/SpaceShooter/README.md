@@ -14,9 +14,9 @@ Made by James Ocampo
 
 5) Download the SS_Resources.zip
 
-6) Drag the SS_Resources.zip into the Unity Project Files
+6) Extract the Zip File
 
-7) Extract the Zip File
+7) Drag the Folders into the Unity Project Files
 
 8) Follow the Lessons in order to create a Space Shooter Game
 
