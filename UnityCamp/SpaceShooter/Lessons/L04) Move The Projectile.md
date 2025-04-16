@@ -3,6 +3,7 @@
 ## Add the Projectile Movement Script to the Player Object
 
 1. Select the **Projectile Object** in the **Scene**
+
 2. Click **Add Component** in the **Inspector**
 3. Select the **Projectile Movement** Script
 

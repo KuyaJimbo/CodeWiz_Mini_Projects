@@ -13,6 +13,7 @@ A Tag is an **property of a game object** which helps **define the kind of game 
 ## Tag the Player Object with "Player"
 
 1. Select the **Player Object** in the **Scene**
+
 2. At the top of the **Inspector** click on the **Tag drop-down menu**
 3. Select **Player**
 
@@ -21,6 +22,7 @@ A Tag is an **property of a game object** which helps **define the kind of game 
 Their is no "Enemy" Tag so we need to make out own.
 
 1. Select the **Enemy Object** in the **Scene**
+
 2. At the top of the **Inspector** click on the **Tag drop-down menu**
 3. Click **Add Tag...**
 4. Click the **+** under the **Tags** Box

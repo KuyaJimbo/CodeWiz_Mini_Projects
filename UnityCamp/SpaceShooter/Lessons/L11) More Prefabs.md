@@ -9,6 +9,7 @@ Prefabs are **REUSABLE** Game Objects which simplify **RECREATING** objects we a
 ## Make the Enemy a Prefab
 
 1. In the **Hierarchy**, select the Enemy Game Object
+
 2. Click and Drag it into the **Project Files** section at the bottom of your screen.
 
 ## That's it!

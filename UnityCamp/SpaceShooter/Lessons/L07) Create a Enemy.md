@@ -1,39 +1,40 @@
-# L1) Create the Player Object
+# L7) Create the Enemy Object
 
 This tutorial demonstrates how to create Game Objects in Unity
 
-## Use a Triangle Game Object for the Player
+## Use a Square Game Object for the Enemy
 
-1. In the **Hierarchy**, add a Triangle Game Object and name it "Player"
+1. In the **Hierarchy**, add a Square Game Object and name it "Enemy"
 
-- 2D Object > Sprites > Triangle
+- 2D Object > Sprites > Square
 
 ## In the Inspector notice 2 COMPONENTS have been created
 
 **Transform**
 
-- Controls WHERE the Triangle Game Object is
+- Controls WHERE the Square Game Object is
 
 **Sprite Renderer**
 
-- Controls how the Triangle Game Object LOOKS
+- Controls how the Square Game Object LOOKS
 
-## Adjust the Player's Position in the Scene View
+## Adjust the Enemy's Position in the Scene View
 
 There are 2 ways to change the Position:
 **1) Transform Component's Position**
 
 - X = 0
-- Y = -3
+- Y = 4
 - Z = 0
 
 **2) Move Tool**
 
 - Use the _Colored Arrows_ to pull the player along an Axis
 
-## BONUS: Design your own Player Ship!
+## BONUS: Design your own Enemy!
 
 1. Create and **EXPORT** your design as a **PNG** using https://www.piskelapp.com/p/create/sprite
+
 2. Reopen **Unity** and **Right-Click** in the **Project Files** section at the bottom of your screen.
 3. Click **Import New Asset...**
 4. Open the **Download Folder**, select your **design**, and click **Import**

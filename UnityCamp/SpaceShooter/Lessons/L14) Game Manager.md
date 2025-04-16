@@ -11,6 +11,7 @@ This tutorial demonstrates how to create a Game Manager Object in Unity
 ## Add the Enemy Spawner Script to the Empty Object
 
 1. Select the **Game Manager Object** in the **Scene**
+
 2. Click **Add Component** in the **Inspector**
 3. Select the **Game Manager** Script
 

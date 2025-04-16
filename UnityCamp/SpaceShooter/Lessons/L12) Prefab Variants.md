@@ -7,6 +7,7 @@ What if we wanted to make different kinds of enemies?
 Don't try to remake more enemy Object from scratch! We can use the Enemy Prefab!
 
 1. Drag the **Enemy Prefab** into your **Scene**
+
 2. Change the enemy's **Sprite** with the **Sprite Renderer** component
 3. Change the **Scale** of the enemy with the **Transform** component
 4. Change the **Speed** of the enemy with the **Enemy Movement** script
@@ -15,6 +16,7 @@ Don't try to remake more enemy Object from scratch! We can use the Enemy Prefab!
 ## Make this NEW Enemy a Prefab
 
 1. In the **Hierarchy**, select the new Enemy Game Object
+
 2. Click and Drag it into the **Project Files** section at the bottom of your screen
 3. Select **Prefab Variant** in the **Pop-Up window**
 

@@ -35,6 +35,7 @@ In the **Hierarchy**, add a UI Image Game Object and name it "Score Space"
 ## Adjust the Position of the Score Space
 
 1) Double-Click on the **Canvas** Object in the **Hierarchy** to Zoom our focus on it
+
 2) Select the **Score Space** Object use the **Move Tool** to position it at the top of the screen
 3) Use the **Rect Transform** component to adjust the Width and Height
 
@@ -59,6 +60,7 @@ In the **Hierarchy**, add a UI Text Game Object and name it "Score Text"
 ## Adjust the Position of the Score Space
 
 1) Double-Click on the **Canvas** Object in the **Hierarchy** to Zoom our focus on it
+
 2) Select the **Score Text** Object use the **Move Tool** to position it inside of the Score Space
 3) Use the **Rect Transform** component to adjust the Width and Height
 

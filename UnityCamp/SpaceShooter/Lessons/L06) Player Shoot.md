@@ -3,6 +3,7 @@
 ## Add the Player Shoot Script to the Player Object
 
 1. Select the **Player Object** in the **Scene**
+
 2. Click **Add Component** in the **Inspector**
 3. Select the **Player Shoot** Script
 
@@ -65,6 +66,7 @@ public class PlayerShoot : MonoBehaviour
 Remember that **Projectile Prefab** we just made? The Player needs it to shoot!
 
 1) Select the **Player** Object in Unity
+
 2) Look for the **Player Shoot** Script in the **Inspector** and find the **projectilePrefab** field
 2) Click and Drag your **Projectile Prefab** and into the **projectilePrefab** field 
 
@@ -75,6 +77,7 @@ There should be a folder called **Sounds** in the **Project Files**.
 Select a sound and press the Play button in the Inspector to hear it.
 
 1) Select the **Player** Object in Unity
+
 2) Look for the **Player Shoot** Script in the **Inspector** and find the **shootSound** field
 2) Click and Drag your **Sound** and into the **projectilePrefab** field 
 
