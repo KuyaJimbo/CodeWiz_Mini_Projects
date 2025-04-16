@@ -20,7 +20,7 @@ public class PlayerCollision : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // Check if the bullet collides with an enemy
+        // Check if the bullet collides with an enemy object
         if (collision.CompareTag("Enemy"))
         {
             // Challenge 2: Get the GameManager
@@ -54,11 +54,11 @@ public class PlayerCollision : MonoBehaviour
                 AudioSource.PlayClipAtPoint(gameOverSound, transform.position);
             }
 
-            // Challenge 5: Destroy this player object after 3 seconds
-            // Example: Destroy(gameObject, 3f);
+            // Challenge 5: Destroy this player object
+            // Example: Destroy(gameObject);
 
             /* -- ENTER YOUR CODE HERE -- */
-            Destroy(gameObject, 3f);
+            Destroy(gameObject);
         }
     }
 }

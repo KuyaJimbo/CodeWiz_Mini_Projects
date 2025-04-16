@@ -20,7 +20,7 @@ public class PlayerCollision : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // Check if the bullet collides with an enemy
+        // Check if the bullet collides with an enemy object
         if (collision.CompareTag("Enemy"))
         {
             // Challenge 2: Get the GameManager

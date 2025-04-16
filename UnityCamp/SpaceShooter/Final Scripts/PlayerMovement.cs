@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
     // Here's how we create a PRIVATE HORIZONTALINPUT variable (Float is a decimal number)
     private float horizontalInput;
 
-    // CHALLENGE 1: Create a PRIVATE VERTICALINPUT variable as a float
+    // Challenge 1: Create a PRIVATE VERTICALINPUT variable as a float
     // Example: private float verticalInput;
 
     /* -- ENTER YOUR CODE HERE -- */

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletMovement : MonoBehaviour
+public class ProjectileMovement : MonoBehaviour
 {
     // HOW TO CREATE A VARIABLE:
     // Variables have 3 parts:
@@ -34,8 +34,8 @@ public class BulletMovement : MonoBehaviour
             speed = 5f;
         }
 
-        // -- SET BULLET DESTROY TIME --
-        // Let's destroy the bullet after 3 seconds so it does not go off-screen
+        // -- SET PROJECTILE DESTROY TIME --
+        // Let's destroy the projectile after 3 seconds so it does not go off-screen
         // Example: Destroy(gameObject, 3f);
 
         /* -- ENTER YOUR CODE HERE -- */
@@ -45,8 +45,8 @@ public class BulletMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // --- CONTROL BULLET MOVEMENT --- 
-        // Move the bullet forward based on SPEED
+        // --- CONTROL PROJECTILE MOVEMENT --- 
+        // Move the projectile forward based on SPEED
         // Example: transform.Translate(Vector2.up * speed * Time.deltaTime);
 
         /* -- ENTER YOUR CODE HERE -- */

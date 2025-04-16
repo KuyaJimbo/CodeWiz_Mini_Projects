@@ -25,21 +25,21 @@ public class EnemySpawner : MonoBehaviour
 
 
     // BoostSpawnRate is how much faster we spawn as the game progresses
-    // Challenge 3: Create a PUBLIC boostSpawnRate variable (Data Type: float)
+    // Challenge 2: Create a PUBLIC boostSpawnRate variable (Data Type: float)
     // Example: public float boostSpawnRate;
 
     /* -- ENTER YOUR CODE HERE -- */
 
 
     // Enemy Spawn X Position
-    // Challenge 4: Create a PUBLIC enemySpawnX variable (Data Type: float)
+    // Challenge 3: Create a PUBLIC enemySpawnX variable (Data Type: float)
     // Example: public float enemySpawnX;
 
     /* -- ENTER YOUR CODE HERE -- */
 
 
     // Give the Enemy an angle to spawn at
-    // Challenge 5: Create a PUBLIC enemySpawnAngle variable (Data Type: float)
+    // Challenge 4: Create a PUBLIC enemySpawnAngle variable (Data Type: float)
     // Example: public float enemySpawnAngle;
 
     /* -- ENTER YOUR CODE HERE -- */
@@ -97,7 +97,7 @@ public class EnemySpawner : MonoBehaviour
 
 
             // 2) Randomly select an enemySpawnAngle for the enemy spawn
-            // Example: enemySpawnAngle = Random.Range(-45f, 45f);
+            // Example: enemySpawnAngle = Random.Range(-15f, 15f);
 
             /* -- ENTER YOUR CODE HERE -- */
 
@@ -117,6 +117,7 @@ public class EnemySpawner : MonoBehaviour
 
             // 5) Decrease the enemy spawn rate (make it spawn faster) using BoostSpawnRate
             // Example: enemySpawnRate *= (1 - (boostSpawnRate));
+            
             /* -- ENTER YOUR CODE HERE -- */
 
 

@@ -11,7 +11,7 @@ public class PlayerShoot : MonoBehaviour
     // Variable_Name: the name of the variable (should be descriptive of what it does)
 
     // Prefabs are pre-made game objects that we can use in our game.
-    // Challenge 1: Create a PUBLIC BULLETPREFAB variable (Data Type: GameObject)
+    // Challenge 1: Create a PUBLIC PROJECTILEPREFAB variable (Data Type: GameObject)
 
     /* -- ENTER YOUR CODE HERE -- */
 

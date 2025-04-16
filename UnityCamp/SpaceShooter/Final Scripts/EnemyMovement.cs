@@ -39,7 +39,7 @@ public class EnemyMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // --- CONTROL ENEMY MOVEMENT --- 
+        // -- CONTROL ENEMY MOVEMENT -- 
         // Move the bullet down based on SPEED
         // Example: transform.Translate(Vector2.down * speed * Time.deltaTime);
 

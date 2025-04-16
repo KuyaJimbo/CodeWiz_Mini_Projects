@@ -11,10 +11,10 @@ public class PlayerShoot : MonoBehaviour
     // Variable_Name: the name of the variable (should be descriptive of what it does)
 
     // Prefabs are pre-made game objects that we can use in our game.
-    // Challenge 1: Create a PUBLIC BULLETPREFAB variable (Data Type: GameObject)
+    // Challenge 1: Create a PUBLIC PROJECTILEPREFAB variable (Data Type: GameObject)
 
     /* -- ENTER YOUR CODE HERE -- */
-    public GameObject bulletPrefab;
+    public GameObject projectilePrefab;
 
     // Audio clips are sound files that we can play in our game.
     // Challenge 2: Create a PUBLIC shootSound variable (Data Type: AudioClip)
@@ -51,7 +51,7 @@ public class PlayerShoot : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             // INSTANTIATE creates a GAMEOBJECT at a POSITION with a ROTATION
-            Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+            Instantiate(projectilePrefab, transform.position, Quaternion.identity);
 
             // PLAYCLIPATPOINT plays an AUDIOCLIP at a specific position in the game world
             AudioSource.PlayClipAtPoint(shootSound, transform.position);

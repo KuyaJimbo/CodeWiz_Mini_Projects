@@ -4,7 +4,7 @@ This tutorial continues demonstrating how to create Game Objects in Unity
 
 ## Use a Circle Game Object for the Player
 
-1. In the **Hierarchy**, add a Circle Game Object:
+1. In the **Hierarchy**, add a Circle Game Object and name it "Projectile"
 
 - 2D Object > Sprites > Circle
 
@@ -16,7 +16,7 @@ This tutorial continues demonstrating how to create Game Objects in Unity
 
 **Sprite Renderer**
 
-- Controls how the Triangle Game Object LOOKS)
+- Controls how the Circle Game Object LOOKS
 
 ## BONUS: Design your own Projectile!
 

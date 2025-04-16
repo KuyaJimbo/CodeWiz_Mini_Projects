@@ -25,25 +25,25 @@ public class EnemySpawner : MonoBehaviour
     public GameObject enemyPrefab;
 
     // BoostSpawnRate is how much faster we spawn as the game progresses
-    // Challenge 3: Create a PUBLIC boostSpawnRate variable (Data Type: float)
+    // Challenge 2: Create a PUBLIC boostSpawnRate variable (Data Type: float)
     // Example: public float boostSpawnRate;
 
     /* -- ENTER YOUR CODE HERE -- */
     public float boostSpawnRate;
 
     // Enemy Spawn X Position
-    // Challenge 4: Create a PUBLIC enemySpawnX variable (Data Type: float)
+    // Challenge 3: Create a PUBLIC enemySpawnX variable (Data Type: float)
     // Example: public float enemySpawnX;
 
     /* -- ENTER YOUR CODE HERE -- */
-    private float enemySpawnX;
+    public float enemySpawnX;
 
     // Give the Enemy an angle to spawn at
-    // Challenge 5: Create a PUBLIC enemySpawnAngle variable (Data Type: float)
+    // Challenge 4: Create a PUBLIC enemySpawnAngle variable (Data Type: float)
     // Example: public float enemySpawnAngle;
 
     /* -- ENTER YOUR CODE HERE -- */
-    private float enemySpawnAngle;
+    public float enemySpawnAngle;
 
     // Start is called before the first frame update
     void Start()
@@ -77,6 +77,7 @@ public class EnemySpawner : MonoBehaviour
             enemySpawnTimer = 0f;
         }
 
+
         // -- GIVE BOOSTSPAWNRATE A DEFAULT VALUE --
         // if (boostSpawnRate == 0)
         // {
@@ -109,7 +110,7 @@ public class EnemySpawner : MonoBehaviour
             enemySpawnX = Random.Range(-8f, 8f);
 
             // 2) Randomly select an enemySpawnAngle for the enemy spawn
-            // Example: enemySpawnAngle = Random.Range(-45f, 45f);
+            // Example: enemySpawnAngle = Random.Range(-15f, 15f);
 
             /* -- ENTER YOUR CODE HERE -- */
             enemySpawnAngle = Random.Range(-15f, 15f);
@@ -119,7 +120,7 @@ public class EnemySpawner : MonoBehaviour
             // Example: Instantiate(enemyPrefab, new Vector2(enemySpawnX, 6f), Quaternion.identity + Quaternion.Euler(0, 0, enemySpawnAngle));
 
             /* -- ENTER YOUR CODE HERE -- */
-            Instantiate(enemyPrefab, new Vector2(enemySpawnX, 6f), Quaternion.Euler(0, 0, enemySpawnAngle));
+            Instantiate(enemyPrefab, new Vector2(enemySpawnX, 6f), Quaternion.identity + Quaternion.Euler(0, 0, enemySpawnAngle));
 
             // 4) Reset the enemy spawn timer
             // Example: enemySpawnTimer = 0f;
@@ -129,14 +130,13 @@ public class EnemySpawner : MonoBehaviour
 
             // 5) Decrease the enemy spawn rate (make it spawn faster) using BoostSpawnRate
             // Example: enemySpawnRate *= (1 - (boostSpawnRate));
+            
             /* -- ENTER YOUR CODE HERE -- */
             enemySpawnRate *= (1 - (boostSpawnRate));
 
             // 6) BONUS Make sure the enemy spawn rate doesn't go below 0.5 seconds
-            if (enemySpawnRate < 0.5f)
-            {
-                enemySpawnRate = 0.5f;
-            }
+            enemySpawnRate = Mathf.Max(enemySpawnRate, 0.5f);
+
         }
     }
 }

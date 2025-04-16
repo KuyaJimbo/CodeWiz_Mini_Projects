@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletCollision : MonoBehaviour
+public class ProjectileCollision : MonoBehaviour
 {
-    // -- MAKE SURE THE BULLET HAS A POLYGON COLLIDER2D COMPONENT -- (For trigger events)
+    // -- MAKE SURE THE PROJECTILE HAS A POLYGON COLLIDER2D COMPONENT -- (For trigger events)
     // - The IsTrigger property should be checked to allow for trigger events
 
-    // -- MAKE SURE THE BULLET HAS A RIGIDBODY2D COMPONENT -- (For physics interactions)
+    // -- MAKE SURE THE PROJECTILE HAS A RIGIDBODY2D COMPONENT -- (For physics interactions)
     // - Set Gravity Scale = 0
     // - Collision Detection should be set to Continuous (more accurate for fast-moving objects)
 
@@ -16,10 +16,11 @@ public class BulletCollision : MonoBehaviour
 
     /* -- ENTER YOUR CODE HERE -- */
 
+
     // OnTriggerEnter2D is called when this object enters another object's trigger collider
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // Check if the bullet collides with an enemy
+        // Check if the projectile collides with an enemy
         if (collision.CompareTag("Enemy"))
         {
             // Challenge 2: Play the enemyDestroyedSound when the enemy is destroyed
@@ -43,8 +44,10 @@ public class BulletCollision : MonoBehaviour
             /* -- ENTER YOUR CODE HERE -- */
 
 
+
             // Challenge 4: Destroy this bullet object
             // Example: Destroy(gameObject);
+
         }
     }
 }
