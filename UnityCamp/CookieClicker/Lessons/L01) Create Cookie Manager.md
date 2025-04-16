@@ -30,74 +30,35 @@ In the **Hierarchy**, add an Empty Game Object and name it "Cookie Manager"
 
 ## Open the Script and Fix the Code!
 
-using System.Collections;
+    using System.Collections;
+    using System.Collections.Generic;
+    using UnityEngine;
 
-using System.Collections.Generic;
+    public class CookieManager : MonoBehaviour
+    {
+        // Singleton instance
+        public static CookieManager Instance { get; private set; }
 
-using UnityEngine;
+        // Public static properties
+        public static float TotalCookies { get; set; }
+        public static float CookiesPerSecond { get; set; }
+        public static float CookiesPerClick { get; set; }
 
-public class CookieManager : MonoBehaviour
+        // Private timer for passive income
+        private float Timer;
 
-{
+        private void Awake()
+        {
+            // Singleton pattern implementation
+            if (Instance != null && Instance != this)
+            {
+                Destroy(gameObject);
+                return;
+            }
 
-$\qquad$
-$\qquad$// Singleton instance
-
-$\qquad$
-$\qquad$public static CookieManager Instance { get; private set; }
-
-$\qquad$
-$\qquad$// Public static properties
-
-$\qquad$
-$\qquad$public static float TotalCookies { get; set; }
-
-$\qquad$
-$\qquad$public static float CookiesPerSecond { get; set; }
-
-$\qquad$
-$\qquad$public static float CookiesPerClick { get; set; }
-
-$\qquad$
-$\qquad$// Private timer for passive income
-
-$\qquad$
-$\qquad$private float Timer;
-
-$\qquad$
-$\qquad$private void Awake()
-
-$\qquad$
-$\qquad${
-
-$\qquad$
-$\qquad$// Singleton pattern implementation
-
-$\qquad$
-$\qquad$if (Instance != null && Instance != this)
-
-$\qquad$
-$\qquad${
-
-$\qquad$
-$\qquad$$\qquad$
-$\qquad$Destroy(gameObject);
-
-$\qquad$
-$\qquad$$\qquad$
-$\qquad$return;
-
-$\qquad$
-$\qquad$}
-
-$\qquad$
-$\qquad$Instance = this;
-
-$\qquad$
-$\qquad$DontDestroyOnLoad(gameObject);
-
-$\qquad$
-$\qquad$}
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
 
 ### // Start is called before the first frame update
     private void Start()
@@ -112,21 +73,3 @@ $\qquad$}
 }
 
 ## Good Job! Return to Unity and make sure it does not give any Errors. 
-
-### // Update is called once per frame
-    private void Update()
-    {
-        // Increase cookies based on cookies per second
-        Timer += Time.deltaTime;
-
-        // If the timer reaches 1 second
-        if (Timer >= 1f)
-        {
-            // Increase Total Cookies by Cookies Per Second
-            TotalCookies += CookiesPerSecond;
-            
-            // Reset the Timer back to 0
-            Timer = 0f;
-        }
-    }
-}
