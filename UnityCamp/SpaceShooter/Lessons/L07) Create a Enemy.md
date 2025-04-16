@@ -4,7 +4,7 @@ This tutorial demonstrates how to create Game Objects in Unity
 
 ## Use a Square Game Object for the Enemy
 
-1. In the **Hierarchy**, add a Square Game Object and name it "Enemy"
+In the **Hierarchy**, add a Square Game Object and name it "Enemy"
 
 - 2D Object > Sprites > Square
 

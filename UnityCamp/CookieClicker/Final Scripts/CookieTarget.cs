@@ -13,7 +13,7 @@ public class CookieTarget : MonoBehaviour
 
         // Scale the cookie up and down for a visual effect
         transform.localScale *= 1.2f;
-    
+
     }
 
     // OnMouseUp is called when the mouse button is released over the GameObject

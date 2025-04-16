@@ -4,7 +4,7 @@ This tutorial demonstrates how to create Game Objects in Unity
 
 ## Use a Triangle Game Object for the Player
 
-1. In the **Hierarchy**, add a Triangle Game Object and name it "Player"
+In the **Hierarchy**, add a Triangle Game Object and name it "Player"
 
 - 2D Object > Sprites > Triangle
 

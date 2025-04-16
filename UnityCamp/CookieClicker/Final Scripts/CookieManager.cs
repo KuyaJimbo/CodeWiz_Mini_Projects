@@ -23,30 +23,35 @@ public class CookieManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-        
+
         Instance = this;
         DontDestroyOnLoad(gameObject);
     }
 
+    // Start is called before the first frame update
     private void Start()
     {
-        // Initialize values
+        // Set default
         TotalCookies = 0f;
         CookiesPerSecond = 0f;
         CookiesPerClick = 1f;
         Timer = 0f;
     }
 
+    // Update is called once per frame
     private void Update()
     {
         // Increase cookies based on cookies per second
         Timer += Time.deltaTime;
-        
+
+        // If the timer reaches 1 second
         if (Timer >= 1f)
         {
+            // Increase Total Cookies by Cookies Per Second
             TotalCookies += CookiesPerSecond;
-            Timer -= 1f; // Subtract instead of resetting to 0 to maintain precision
-            Debug.Log("Total Cookies: " + TotalCookies);
+
+            // Reset the Timer back to 0
+            Timer = 0f;
         }
     }
 }

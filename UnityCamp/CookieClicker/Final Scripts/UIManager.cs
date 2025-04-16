@@ -17,12 +17,12 @@ public class UIManager : MonoBehaviour
         {
             TotalCookiesText.text = "Cookies: " + Mathf.Floor(CookieManager.TotalCookies).ToString("N0");
         }
-        
+
         if (CookiesPerSecondText != null)
         {
             CookiesPerSecondText.text = "Per Second: " + CookieManager.CookiesPerSecond.ToString("N1");
         }
-        
+
         if (CookiesPerClickText != null)
         {
             CookiesPerClickText.text = "Per Click: " + CookieManager.CookiesPerClick.ToString("N1");
