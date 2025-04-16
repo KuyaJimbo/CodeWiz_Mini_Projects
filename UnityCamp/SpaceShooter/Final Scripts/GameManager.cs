@@ -12,6 +12,9 @@ public class GameManager : MonoBehaviour
     // Data_Type: what type of data the variable holds (int, float, string, etc.)
     // Variable_Name: the name of the variable (should be descriptive of what it does)
 
+    // PUBLIC SCORE variable (Data Type: int)
+    public int score;
+
     // Challenge 1: Create a PUBLIC GAME OVER SCREEN UI variable (Data Type: GameObject)
     // Example: public GameObject gameOverScreenUI;
 
@@ -24,13 +27,7 @@ public class GameManager : MonoBehaviour
     /* -- ENTER YOUR CODE HERE -- */
     public bool isGameOver;
 
-    // Challenge 3: Create a PUBLIC SCORE variable (Data Type: int)
-    // Example: public int score;
-
-    /* -- ENTER YOUR CODE HERE -- */
-    public int score;
-
-    // Challenge 4: Create a PUBLIC SCORETEXT (Data Type: TextMeshProUGUI)
+    // Challenge 3: Create a PUBLIC SCORETEXT (Data Type: TextMeshProUGUI)
     // Example: public TextMeshProUGUI scoreText;
 
     /* -- ENTER YOUR CODE HERE -- */

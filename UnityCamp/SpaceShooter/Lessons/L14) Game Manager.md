@@ -41,16 +41,16 @@ public class GameManager : MonoBehaviour
 
 // **Variable_Name**: the name of the variable (should be descriptive of what it does)
 
+### // PUBLIC SCORE variable (Data Type: int)
+    public int score;
+
 ### // Challenge 1: Create a PUBLIC GAME OVER SCREEN UI variable (Data Type: GameObject)
     public GameObject gameOverScreenUI;
 
 ### // Challenge 2: Create a PUBLIC IS GAMEOVER variable (Data Type: bool)
     public bool isGameOver;
 
-### // Challenge 3: Create a PUBLIC SCORE variable (Data Type: int)
-    public int score;
-
-### // Challenge 4: Create a PUBLIC SCORETEXT (Data Type: TextMeshProUGUI)
+### // Challenge 3: Create a PUBLIC SCORETEXT (Data Type: TextMeshProUGUI)
     public TextMeshProUGUI scoreText;
 
 ### // Start is called before the first frame update
