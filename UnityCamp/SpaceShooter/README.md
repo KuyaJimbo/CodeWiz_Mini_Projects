@@ -2,6 +2,10 @@
 
 Made by James Ocampo
 
+## Play the Sample Game:
+
+https://play.unity.com/en/games/31ab3093-615a-4bed-9751-30a85a6566e2/webgl-builds
+
 ## How to use:
 
 1) Open a New Project in Unity
