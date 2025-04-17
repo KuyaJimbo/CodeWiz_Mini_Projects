@@ -1,8 +1,8 @@
-# L15) User Interfaces (UI)
+# L04) Show Total Cookies
 
 This lesson teaches how to display the UI Elements such as Text, Images, or Buttons.
 
-## What is a User Interface
+## What is a User Interface?
 
 A User Interface is a visual element which the user can interact with.
 
@@ -12,9 +12,9 @@ Examples:
 - Score Text
 - Game Over Image (or Screen)
 
-## Make a UI Image for the Score Space
+## Make a UI Image for the Cookie Count Space
 
-In the **Hierarchy**, add a UI Image Game Object and name it "Score Space"
+In the **Hierarchy**, add a UI Image Game Object and name it "Cookie Count Space"
 
 - UI > Image
 
@@ -36,12 +36,13 @@ In the **Hierarchy**, add a UI Image Game Object and name it "Score Space"
 
 1) Double-Click on the **Canvas** Object in the **Hierarchy** to Zoom our focus on it
 
-2) Select the **Score Space** Object use the **Move Tool** to position it at the top of the screen
+2) Select the **Cookie Count Space** Object use the **Move Tool** to position it at the top of the screen
+
 3) Use the **Rect Transform** component to adjust the Width and Height
 
 ## Make a UI Text for the Score Space
 
-In the **Hierarchy**, add a UI Text Game Object and name it "Score Text"
+In the **Hierarchy**, add a UI Text Game Object and name it "Cookie Count Text"
 
 - UI > Text - TextMeshPro 
     
@@ -61,7 +62,7 @@ In the **Hierarchy**, add a UI Text Game Object and name it "Score Text"
 
 1) Double-Click on the **Canvas** Object in the **Hierarchy** to Zoom our focus on it
 
-2) Select the **Score Text** Object use the **Move Tool** to position it inside of the Score Space
+2) Select the **Score Text** Object use the **Move Tool** to position it inside of the **Cookie Count Space**
 
 3) Use the **Rect Transform** component to adjust the Width and Height
 

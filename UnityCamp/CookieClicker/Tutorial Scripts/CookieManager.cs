@@ -31,11 +31,19 @@ public class CookieManager : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        // Set default
+        // Set default values
+        // Set TotalCookies = 0;
         TotalCookies = 0f;
-        CookiesPerSecond = 0f;
-        CookiesPerClick = 1f;
-        Timer = 0f;
+
+        // SET CookiesPerSecond = 0;
+
+
+        // SET CookiesPerClick = 1;
+        
+
+        // SET Timer = 0;
+        
+
     }
 
     // Update is called once per frame
@@ -48,10 +56,12 @@ public class CookieManager : MonoBehaviour
         if (Timer >= 1f)
         {
             // Increase Total Cookies by Cookies Per Second
-            TotalCookies += CookiesPerSecond;
+            // TotalCookies += CookiesPerSecond;
 
+            
             // Reset the Timer back to 0
-            Timer = 0f;
+            // Timer = 0;
+
         }
     }
 }

@@ -28,7 +28,8 @@ In the **Hierarchy**, add an Empty Game Object and name it "Cookie Manager"
 
 3. Select the **Cookie Manager** Script
 
-## Open the Script and Fix the Code!
+## Open the Script and Fix the Code! (Start Function is Missing)
+
 
     using System.Collections;
     using System.Collections.Generic;

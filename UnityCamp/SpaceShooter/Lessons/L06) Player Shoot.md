@@ -5,6 +5,7 @@
 1. Select the **Player Object** in the **Scene**
 
 2. Click **Add Component** in the **Inspector**
+
 3. Select the **Player Shoot** Script
 
 ## Open the Script and Fix the Code!
@@ -68,7 +69,8 @@ Remember that **Projectile Prefab** we just made? The Player needs it to shoot!
 1) Select the **Player** Object in Unity
 
 2) Look for the **Player Shoot** Script in the **Inspector** and find the **projectilePrefab** field
-2) Click and Drag your **Projectile Prefab** and into the **projectilePrefab** field 
+
+3) Click and Drag your **Projectile Prefab** and into the **projectilePrefab** field 
 
 ## Player needs a Shoot Sound!
 
@@ -79,7 +81,8 @@ Select a sound and press the Play button in the Inspector to hear it.
 1) Select the **Player** Object in Unity
 
 2) Look for the **Player Shoot** Script in the **Inspector** and find the **shootSound** field
-2) Click and Drag your **Sound** and into the **projectilePrefab** field 
+
+3) Click and Drag your **Sound** and into the **projectilePrefab** field 
 
 ## Now test out your game by clicking the Play Button
 

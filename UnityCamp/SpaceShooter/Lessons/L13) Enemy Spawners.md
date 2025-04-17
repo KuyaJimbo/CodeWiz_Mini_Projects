@@ -13,6 +13,7 @@ This tutorial demonstrates how to create a Game Object Spawner in Unity
 1. Select the **Enemy Spawner Object** in the **Scene**
 
 2. Click **Add Component** in the **Inspector**
+
 3. Select the **Enemy Spawner** Script
 
 ## Open the Script and Fix the Code!
@@ -126,7 +127,9 @@ public class EnemySpawner : MonoBehaviour
 ## Go back to Unity and adjust the PARAMETERS of this Enemy Spawner
 
 1) Click and Drag any Enemy Prefab which you would like to Spawn
+
 2) Set the Enemy Spawn Rate (How many seconds before one of these enemy's spawn?)
+
 3) Set the Boost Spawn Rate (How much faster do they spawn over time?)
 
 ## Now test out your game by clicking the Play Button
