@@ -32,7 +32,7 @@ In the **Hierarchy**, add a UI Image Game Object and name it "Cookie Count Space
 
 - Controls the Image we see on the Canvas
 
-## Adjust the Position of the Score Space
+## Adjust the Position of the Cookie Count Space
 
 1) Double-Click on the **Canvas** Object in the **Hierarchy** to Zoom our focus on it
 
@@ -58,11 +58,11 @@ In the **Hierarchy**, add a UI Text Game Object and name it "Cookie Count Text"
 
 - Controls the text that is shown and its style
 
-## Adjust the Position of the Score Space
+## Adjust the Position of the Cookie Count Space
 
 1) Double-Click on the **Canvas** Object in the **Hierarchy** to Zoom our focus on it
 
-2) Select the **Score Text** Object use the **Move Tool** to position it inside of the **Cookie Count Space**
+2) Select the **Cookie Count Text** Object use the **Move Tool** to position it inside of the **Cookie Count Space**
 
 3) Use the **Rect Transform** component to adjust the Width and Height
 

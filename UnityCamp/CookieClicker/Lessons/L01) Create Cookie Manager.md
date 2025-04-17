@@ -14,12 +14,6 @@ In the **Hierarchy**, add an Empty Game Object and name it "Cookie Manager"
 
 - Create Empty
 
-## In the Inspector notice 1 COMPONENTS have been created
-
-**Transform**
-
-- Controls WHERE the Triangle Game Object is
-
 ## Add the Cookie Manager Script 
 
 1. Select the **Cookie Manager Object**
@@ -29,7 +23,6 @@ In the **Hierarchy**, add an Empty Game Object and name it "Cookie Manager"
 3. Select the **Cookie Manager** Script
 
 ## Open the Script and Fix the Code! (Start Function is Missing)
-
 
     using System.Collections;
     using System.Collections.Generic;
@@ -65,10 +58,10 @@ In the **Hierarchy**, add an Empty Game Object and name it "Cookie Manager"
     private void Start()
     {
         // Set default values
-        TotalCookies = 0f;
-        CookiesPerSecond = 0f;
-        CookiesPerClick = 1f;
-        Timer = 0f;
+        TotalCookies = 0;
+        CookiesPerSecond = 0;
+        CookiesPerClick = 1;
+        Timer = 0;
     }
 
 }

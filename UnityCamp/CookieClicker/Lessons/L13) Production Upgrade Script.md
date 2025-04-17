@@ -6,9 +6,9 @@ This lesson teaches how to make a script for the Production Upgrade
 
 A Script is a Component which lets you customize how the Game Object works.
 
-## Make a Script for the Click Upgrade
+## Make a Script for the Production Upgrade
 
-1) Select the Click Upgrade Object in the **Hierarchy**
+1) Select the Production Upgrade Object in the **Hierarchy**
 
 2) Click **Add Component** in the **Inspector**
 
@@ -50,7 +50,7 @@ A Script is a Component which lets you customize how the Game Object works.
         }
     }
 
-## Next we need to set some Default Values for the Click Upgrade
+## Next we need to set some Default Values for the Production Upgrade
 
 1) Return to Unity, and look for the ProductionUpgradeCode Component in the Inspector
 
@@ -58,7 +58,7 @@ A Script is a Component which lets you customize how the Game Object works.
 
 #### Here's an Example:
 
-    Cost: 30
+    Cost: 100
     Boost: 1
     Count: 0
 
@@ -66,7 +66,7 @@ A Script is a Component which lets you customize how the Game Object works.
 
 Variables store information or values.
 
-## Next we need to add a Purchase Function (Reopen the ClickUpgradeCode Script)
+## Next we need to add a Purchase Function (Reopen the ProductionUpgradeCode Script)
     
     // Method to purchase the upgrade
     public void Purchase()
@@ -81,7 +81,7 @@ Variables store information or values.
             CookieManager.CookiesPerSecond += Boost;
 
             // Increase the Count by 1
-            Count += 1
+            Count += 1;
         }
     }
 
@@ -123,20 +123,20 @@ Variables store information or values.
                 CookieManager.CookiesPerSecond += Boost;
 
                 // Increase the Count by 1
-                Count += 1
+                Count += 1;
             }
         }
     }
 
 ## Great! Now we need the Button to use the Purchase function when we click on it
 
-1) Select the Click Upgrade Object in the **Hierarchy**
+1) Select the Production Upgrade Object in the **Hierarchy**
 
 2) Look for the Button Component in the **Inspector**
 
 3) Click the **+** button under the **On Click() Event Box**
 
-4) Click and Drag the Click Upgrade Object from the Hierarchy into the Object Field
+4) Click and Drag the Production Upgrade Object from the Hierarchy into the Object Field
 
 5) Click on the Drop-Down labeled "No Function"
 
@@ -144,6 +144,6 @@ Variables store information or values.
 
 ## Now test your game!
 
-### If you have enough Total Cookies, you should be able to purchase the Click Upgrade
+### If you have enough Total Cookies, you should be able to purchase the Production Upgrade
 
 ### Since we used the Cookie Manager, its variables will update in correctly

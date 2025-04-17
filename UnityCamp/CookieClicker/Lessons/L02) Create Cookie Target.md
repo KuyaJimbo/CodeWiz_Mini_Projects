@@ -12,11 +12,11 @@ In the **Hierarchy**, add a Circle Game Object and name it "Cookie Target"
 
 **Transform**
 
-- Controls WHERE the Triangle Game Object is
+- Controls WHERE the Game Object is
 
 **Sprite Renderer**
 
-- Controls how the Triangle Game Object LOOKS
+- Controls how the Game Object LOOKS
 
 ## Adjust the Cookie Target's Position in the Scene View
 

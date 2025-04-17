@@ -1,4 +1,4 @@
-# L7) Show Total CPC (Cookies Per Click)
+# L7) Show Total CPS (Cookies Per Second)
 
 This lesson teaches how to display the UI Elements such as Text, Images, or Buttons.
 
@@ -12,13 +12,13 @@ Examples:
 - Score Text
 - Game Over Image (or Screen)
 
-## Make a UI Image for the CPC Space
+## Make a UI Image for the CPS Space
 
-In the **Hierarchy**, add a UI Image Game Object and name it "CPC Space"
+In the **Hierarchy**, add a UI Image Game Object and name it "CPS Space"
 
 - UI > Image
 
-## Adjust the Position of the Score Space
+## Adjust the Position of the CPS Space
 
 1) Double-Click on the **Canvas** Object in the **Hierarchy** to Zoom our focus on it
 
@@ -26,20 +26,20 @@ In the **Hierarchy**, add a UI Image Game Object and name it "CPC Space"
 
 3) Use the **Rect Transform** component to adjust the Width and Height
 
-## Make a UI Text for the Score Space
+## Make a UI Text for the CPS Space
 
-In the **Hierarchy**, add a UI Text Game Object and name it "CPC Text"
+In the **Hierarchy**, add a UI Text Game Object and name it "CPS Text"
 
 - UI > Text - TextMeshPro 
     
     (If asked, **Import TMP Essentials**)
 
 
-## Adjust the Position and Size of the Score Space
+## Adjust the Position and Size of the CPS Space
 
 1) Double-Click on the **Canvas** Object in the **Hierarchy** to Zoom our focus on it
 
-2) Select the **Score Text** Object use the **Move Tool** to position it inside of the **CPC Space**
+2) Select the **CPS Text** Object use the **Move Tool** to position it inside of the **CPS Space**
 
 3) Use the **Rect Transform** component to adjust the Width and Height
 

@@ -41,4 +41,12 @@ public class CookieTarget : MonoBehaviour
 
 }
 
+## The Cookie Target needs a CircleCollider2D so it knows when the Mouse touches it
+
+1. Select the **Cookie Target Object** in the **Scene**
+
+2. Click **Add Component** in the **Inspector**
+
+3. Select the **CircleCollider2D** component
+
 ## Now test out your game by clicking the Cookie Target

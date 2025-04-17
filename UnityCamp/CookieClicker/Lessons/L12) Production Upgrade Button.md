@@ -32,7 +32,7 @@ In the **Hierarchy**, add a UI Image Game Object and name it "Production Upgrade
 
 ## Edit the Text inside the Button!
 
-1) In the **Hierarchy**, Click the Triangle next to the Click Upgrade Button to show the Text (TMP) Game Object
+1) In the **Hierarchy**, Click the Triangle next to the Production Upgrade Button to show the Text (TMP) Game Object
 
 2) Click the Text Game Object to see its properties in the Inspector
 
@@ -42,6 +42,6 @@ In the **Hierarchy**, add a UI Image Game Object and name it "Production Upgrade
 
     +1 Cookie Per Second
 
-    Cost: 30 Cookies
+    Cost: 100 Cookies
 
-## Great! Next we will make a Script for this Click Upgrade.
+## Great! Next we will make a Script for this Production Upgrade.

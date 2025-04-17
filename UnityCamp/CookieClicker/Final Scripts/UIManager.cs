@@ -9,16 +9,20 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI TotalCookiesText;
 
     // Create a PUBLIC variable for CookiesPerClickText as a TextMeshProUGUI type
-    // public TextMeshProUGUI CookiesPerClickText;
+    public TextMeshProUGUI CookiesPerClickText;
 
     // Create a PUBLIC variable for CookiesPerSecondText as a TextMeshProUGUI type
-    // public TextMeshProUGUI CookiesPerSecondText;
+    public TextMeshProUGUI CookiesPerSecondText;
 
     // Update is called once per frame
     private void Update()
     {
         // Update UI elements with current values
         TotalCookiesText.text = "Cookies: " + Mathf.Floor(CookieManager.TotalCookies).ToString("N0");  
-    
+
+        CookiesPerClickText.text = "Cookies Per Click: " + Mathf.Floor(CookieManager.CookiesPerClick).ToString("N0");    
+
+        CookiesPerSecondText.text = "Cookies Per Second: " + Mathf.Floor(CookieManager.CookiesPerSecond).ToString("N0");
+
     }
 }

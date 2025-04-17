@@ -81,7 +81,7 @@ Variables store information or values.
             CookieManager.CookiesPerClick += Boost;
 
             // Increase the Count by 1
-            Count += 1
+            Count += 1;
         }
     }
 
@@ -123,7 +123,7 @@ Variables store information or values.
                 CookieManager.CookiesPerClick += Boost;
 
                 // Increase the Count by 1
-                Count += 1
+                Count += 1;
             }
         }
     }

@@ -32,7 +32,7 @@ Prefabs are **REUSABLE** Game Objects which simplify **RECREATING** objects we a
 
 #### Here's an Example:
 
-    Cost: 50
+    Cost: 35
     Boost: 2
     Count: 0
 
@@ -46,7 +46,7 @@ Variables store information or values.
 
     +2 Cookie Per Click
 
-    Cost: 50 Cookies
+    Cost: 35 Cookies
 
 ## Now test your game!
 

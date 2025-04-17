@@ -20,7 +20,7 @@ In the **Hierarchy**, add a UI Image Game Object and name it "CPC Space"
 
 - UI > Image
 
-## Adjust the Position of the Score Space
+## Adjust the Position of the CPC Space
 
 1) Double-Click on the **Canvas** Object in the **Hierarchy** to Zoom our focus on it
 
@@ -28,7 +28,7 @@ In the **Hierarchy**, add a UI Image Game Object and name it "CPC Space"
 
 3) Use the **Rect Transform** component to adjust the Width and Height
 
-## Make a UI Text for the Score Space
+## Make a UI Text for the CPC Space
 
 In the **Hierarchy**, add a UI Text Game Object and name it "CPC Text"
 
@@ -37,11 +37,11 @@ In the **Hierarchy**, add a UI Text Game Object and name it "CPC Text"
     (If asked, **Import TMP Essentials**)
 
 
-## Adjust the Position and Size of the Score Space
+## Adjust the Position and Size of the CPC Space
 
 1) Double-Click on the **Canvas** Object in the **Hierarchy** to Zoom our focus on it
 
-2) Select the **Score Text** Object use the **Move Tool** to position it inside of the **CPC Space**
+2) Select the **CPC Text** Object use the **Move Tool** to position it inside of the **CPC Space**
 
 3) Use the **Rect Transform** component to adjust the Width and Height
 
