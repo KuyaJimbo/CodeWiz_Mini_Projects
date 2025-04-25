@@ -14,6 +14,8 @@ public class BreakableBlock : MonoBehaviour
         // Check if the colliding object has the "Projectile" tag
         if (collision.gameObject.CompareTag("Projectile"))
         {
+            // Destroy the Projectile
+            Destroy(collision.gameObject);
             // Get the position before destroying for sound placement
             Vector3 position = transform.position;
             
