@@ -7,20 +7,30 @@ public class BreakableBlock : MonoBehaviour
     
     [Tooltip("Sound to play when the block is destroyed")]
     public AudioClip destroySound;
+    public AudioClip hitSound;
     
     private void OnCollisionEnter(Collision collision)
     {
         // Check if the colliding object has the "Projectile" tag
         if (collision.gameObject.CompareTag("Projectile"))
         {
+            // Get the position before destroying for sound placement
+            Vector3 position = transform.position;
+            
             // Decrease health by 1
             // Example: health -= 1;
+            health -= 1;
+
+            // Play sound if available
+            if (hitSound != null)
+            {
+                AudioSource.PlayClipAtPoint(hitSound, position);
+            }
             
             // Check if health is zero or less
             if (health <= 0)
             {
-                // Get the position before destroying for sound placement
-                Vector3 position = transform.position;
+                
                 
                 // Play sound if available
                 if (destroySound != null)
@@ -30,6 +40,7 @@ public class BreakableBlock : MonoBehaviour
                 
                 // Destroy the game object
                 // Example: Destroy(gameObject);
+                Destroy(gameObject);
             }
         }
     }
