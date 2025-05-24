@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     // Create the VARIABLES:
     // PUBLIC Movement Speed Variable(Hint: float)
-
+    public float movementSpeed = 500f;
     // PRIVATE Rigidbody component (Hint: Rigidbody)
 
 
