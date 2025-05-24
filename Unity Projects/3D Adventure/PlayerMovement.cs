@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    // Movement speed (Hint: float)
+    // Create the VARIABLES:
+    // PUBLIC Movement Speed Variable(Hint: float)
 
-    // Rigidbody component (Hint: Rigidbody)
+    // PRIVATE Rigidbody component (Hint: Rigidbody)
 
 
     // Start is called before the first frame update
@@ -29,19 +30,21 @@ public class PlayerMovement : MonoBehaviour
             rb.AddForce(transform.forward * movementSpeed * Time.deltaTime);
         }
 
-        // // Move the object backward examples
+        // // Move the player backward
         // if (Input.GetKey(_____________))
         // {
         //     // Push the object backward with a force on the Rigidbody
         //     rb.AddForce(_____________ * movementSpeed * Time.deltaTime);
         // }
 
+        // // Move the player left
         // if (Input.GetKey(_____________))
         // {
         //     // Push the object left with a force on the Rigidbody
         //     rb.AddForce(_____________ * movementSpeed * Time.deltaTime);
         // }
 
+        // // Move the player right
         // if (Input.GetKey(_____________))
         // {
         //     // Push the object right with a force on the Rigidbody
