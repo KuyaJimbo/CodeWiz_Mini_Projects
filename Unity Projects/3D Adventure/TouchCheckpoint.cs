@@ -7,8 +7,8 @@ public class TouchCheckpoint : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             Transform checkpointSpawn = transform.Find("CheckpointSpawn");
-            TeleportPlayer teleportScript = collision.gameObject.GetComponent<TeleportPlayer>();
-            teleportScript.SetCheckpoint(checkpointSpawn);
+            PlayerTeleport teleportScript = collision.gameObject.GetComponent<PlayerTeleport>();
+            teleportScript.SetTeleportTarget(checkpointSpawn);
         }
     }
 }
