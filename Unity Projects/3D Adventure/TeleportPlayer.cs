@@ -1,19 +1,23 @@
 using UnityEngine;
 
-public class TeleportPlayer : MonoBehaviour
+public class PlayerTeleport : MonoBehaviour
 {
-    private Transform lastCheckpoint;
+    public Transform teleportTarget; // The target position to teleport to
 
-    public void SetCheckpoint(Transform newCheckpoint)
+    // Set teleport target
+    public void SetTeleportTarget(Transform target)
     {
-        lastCheckpoint = newCheckpoint;
+        // Set the teleport target to the provided transform
+        teleportTarget = target;
     }
 
-    public void TeleportToCheckpoint()
+    // Teleport the player to the target position
+    public void TeleportPlayer()
     {
-        if (lastCheckpoint != null)
-        {
-            transform.position = lastCheckpoint.position;
-        }
+        // Teleport the player to the target position
+        transform.position = teleportTarget.position;
+        // Optionally, reset the player's rotation to match the target's rotation
+        transform.rotation = teleportTarget.rotation;
+
     }
 }
