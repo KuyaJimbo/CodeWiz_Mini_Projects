@@ -7,7 +7,6 @@ public class TeleportPlayer : MonoBehaviour
     public void SetCheckpoint(Transform newCheckpoint)
     {
         lastCheckpoint = newCheckpoint;
-        Debug.Log("Checkpoint updated to: " + newCheckpoint.position);
     }
 
     public void TeleportToCheckpoint()
@@ -15,11 +14,6 @@ public class TeleportPlayer : MonoBehaviour
         if (lastCheckpoint != null)
         {
             transform.position = lastCheckpoint.position;
-            Debug.Log("Teleported to last checkpoint.");
-        }
-        else
-        {
-            Debug.LogWarning("No checkpoint has been set.");
         }
     }
 }
