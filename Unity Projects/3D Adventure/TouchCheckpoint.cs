@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayerTouchCheckpoint : MonoBehaviour
+public class TouchCheckpoint : MonoBehaviour
 {
     private void OnCollisionEnter(Collision collision)
     {
