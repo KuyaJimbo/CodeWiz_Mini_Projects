@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class GoalScript : MonoBehaviour
 {
     public GameObject nextLevelButton; // Reference to the next level button
-    public AudioClip goalReachedSound; // Sound to play when the player reaches the goal
+    public AudioClip goalSound; // Sound to play when the player reaches the goal
 
     // When the game starts, hide the next level button
     void Start()
@@ -18,7 +18,7 @@ public class GoalScript : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             nextLevelButton.SetActive(true); // Show the next level button when the player reaches the goal
-            AudioSource.PlayClipAtPoint(goalReachedSound, transform.position); // Play the goal reached sound
+            AudioSource.PlayClipAtPoint(goalSound, transform.position); // Play the goal reached sound
         }
     }
 
