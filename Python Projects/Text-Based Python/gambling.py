@@ -72,16 +72,47 @@ def royalflush(cards):
   return False
 
 def fourOfAKind(cards):
-  pass
+    rank_count = {}
+    for card in cards:
+        rank = card[1]
+        if rank in rank_count:
+            rank_count[rank] += 1
+        else:
+            rank_count[rank] = 1
+    for count in rank_count.values():
+        if count == 4:
+            return True
+    return False
 
 def threeOfAKind(cards):
   pass
 
 def twoPair(cards):
-  pass
+    rank_count = {}
+    for card in cards:
+        rank = card[1]
+        if rank in rank_count:
+            rank_count[rank] += 1
+        else:
+            rank_count[rank] = 1
+    pairs = 0
+    for count in rank_count.values():
+        if count == 2:
+            pairs += 1
+    return pairs >= 2
 
 def onePair(cards):
-  pass
+    rank_count = {}
+    for card in cards:
+        rank = card[1]
+        if rank in rank_count:
+            rank_count[rank] += 1
+        else:
+            rank_count[rank] = 1
+    for count in rank_count.values():
+        if count == 2:
+            return True
+    return False
 
 def highCard(cards):
     return bestCard(cards)
