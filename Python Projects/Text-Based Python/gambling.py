@@ -113,9 +113,7 @@ print("Dealer's best hand: ", evaluateHand(dealer_hand + table))
 player_best = evaluateHand(player_hand + table)
 dealer_best = evaluateHand(dealer_hand + table)
 
-if player_best == dealer_best:
-    print("It's a tie!")
-elif player_best > dealer_best:
-    print("Player wins!")
-else:
-    print("Dealer wins!")
+# If the hands are equal, it's a tie
+
+# Otherwise convert the hand rankings to numerical values for comparison
+# Then the higher hand wins
