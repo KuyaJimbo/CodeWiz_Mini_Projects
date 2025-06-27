@@ -9,7 +9,7 @@ public class Coin : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             // Destroy this coin object when it collides with the player
-            Destroy(gameObject);
+
         }
     }
 }

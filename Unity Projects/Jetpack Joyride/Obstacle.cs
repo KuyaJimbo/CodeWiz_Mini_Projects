@@ -10,7 +10,7 @@ public class Obstacle : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             // Destroy the player object on collision
-            Destroy(collision.gameObject);
+
         }
     }
 }

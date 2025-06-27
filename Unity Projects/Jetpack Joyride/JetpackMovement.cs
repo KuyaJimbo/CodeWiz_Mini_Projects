@@ -18,7 +18,7 @@ public class JetpackMovement : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Space))
         {
-            rb.AddForce(Vector2.up * speed);
+
         }
     }
 }
