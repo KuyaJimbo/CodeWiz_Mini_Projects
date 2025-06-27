@@ -10,7 +10,7 @@ for symbol in symbols:
 for s in range(3):
   random.shuffle(cards)
 
-print(cards)
+# print(cards)
 
 player_hand = list()
 dealer_hand = list()
@@ -31,11 +31,13 @@ print("Dealer: ", dealer_hand)
 table.append(cards.pop())
 table.append(cards.pop())
 table.append(cards.pop())
+table.append(cards.pop())
+table.append(cards.pop())
 
 print("FULL TABLE: ", table)
 
-all_cards = table +  player_hand + dealer_hand + cards
-print(all_cards)
+# all_cards = table + player_hand + dealer_hand + cards
+# print(all_cards)
 
 def bestCard(cards):
   suitranking = {"clubs":0,"diamonds":1,"hearts":2,"spades":3}
@@ -56,7 +58,7 @@ def Flush(cards):
     return True
 
 def Straight(cards):
-  Best = bestCard[cards]
+  Best = bestCard(cards)
   Highest = Best[1]
   Numbers = [card[1] for card in cards]
   for rank in range(Highest,Highest-5,-1):
@@ -85,7 +87,17 @@ def fourOfAKind(cards):
     return False
 
 def threeOfAKind(cards):
-  pass
+    rank_count = {}
+    for card in cards:
+        rank = card[1]
+        if rank in rank_count:
+            rank_count[rank] += 1
+        else:
+            rank_count[rank] = 1
+    for count in rank_count.values():
+        if count == 3:
+            return True
+    return False
 
 def twoPair(cards):
     rank_count = {}
@@ -99,7 +111,7 @@ def twoPair(cards):
     for count in rank_count.values():
         if count == 2:
             pairs += 1
-    return pairs >= 2
+    return pairs == 2
 
 def onePair(cards):
     rank_count = {}
@@ -109,42 +121,82 @@ def onePair(cards):
             rank_count[rank] += 1
         else:
             rank_count[rank] = 1
+    pairs = 0
     for count in rank_count.values():
         if count == 2:
-            return True
-    return False
+            pairs += 1
+    return pairs == 1
+
+def fullHouse(cards):
+    rank_count = {}
+    for card in cards:
+        rank = card[1]
+        if rank in rank_count:
+            rank_count[rank] += 1
+        else:
+            rank_count[rank] = 1
+    has_three = False
+    has_two = False
+    for count in rank_count.values():
+        if count == 3:
+            has_three = True
+        elif count == 2:
+            has_two = True
+    return has_three and has_two
 
 def highCard(cards):
     return bestCard(cards)
 
 def evaluateHand(cards):
     if royalflush(cards):
-        return "Royal Flush"
-    elif Flush(cards):
-        return "Flush"
-    elif Straight(cards):
-        return "Straight"
+        return "Royal Flush", 9
+    elif Flush(cards) and Straight(cards):
+        return "Straight Flush", 8
     elif fourOfAKind(cards):
-        return "Four of a Kind"
+        return "Four of a Kind", 7
+    elif fullHouse(cards):
+        return "Full House", 6
+    elif Flush(cards):
+        return "Flush", 5
+    elif Straight(cards):
+        return "Straight", 4
     elif threeOfAKind(cards):
-        return "Three of a Kind"
+        return "Three of a Kind", 3
     elif twoPair(cards):
-        return "Two Pair"
+        return "Two Pair", 2
     elif onePair(cards):
-        return "One Pair"
+        return "One Pair", 1
     else:
-        return "High Card: " + str(highCard(cards))
+        return "High Card", 0
 
+# Determine the best hand for both player and dealer
+print("Evaluating hands...")
 
-# Example usage
-print("Player's best hand: ", evaluateHand(player_hand + table))
-print("Dealer's best hand: ", evaluateHand(dealer_hand + table))
+# generate all possible combinations of a hand (2 cards) and table (5 cards)
+# and return the best combination of 5 cards
+import itertools 
+def bestHand(hand, table):
+    combined = hand + table
+    best_combination = []
+    for combination in itertools.combinations(combined, 5):
+        if len(combination) == 5:
+            if not best_combination or evaluateHand(combination)[1] > evaluateHand(best_combination)[1]:
+                best_combination = combination
+    return list(best_combination)
+
+player_hand = bestHand(player_hand, table)
+print("Best Player Hand:", player_hand)
+dealer_hand = bestHand(dealer_hand, table)
+print("Best Dealer Hand:", dealer_hand)
 
 # Determine the winner
-player_best = evaluateHand(player_hand + table)
-dealer_best = evaluateHand(dealer_hand + table)
+player_hand_name, player_strength = evaluateHand(player_hand)
+dealer_hand_name, dealer_strength = evaluateHand(dealer_hand)
 
-# If the hands are equal, it's a tie
-
-# Otherwise convert the hand rankings to numerical values for comparison
-# Then the higher hand wins
+if player_strength > dealer_strength:
+    print("Player wins with:", player_hand_name)
+elif dealer_strength > player_strength:
+    print("Dealer wins with:", dealer_hand_name)
+else:
+    # Check for tie-breaking conditions
+    print("Split! Both have:", player_hand_name)
