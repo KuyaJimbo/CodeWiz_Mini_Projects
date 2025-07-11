@@ -1,7 +1,7 @@
 import random
 
 pokemon_name = input("Enter the name of the Pokemon: ")
-ai_name = "AI Trainer"
+ai_name = "Pikachu"
 
 pokemon_health = 100
 ai_health = 100
