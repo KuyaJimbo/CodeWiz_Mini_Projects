@@ -20,17 +20,15 @@ Enemy_Name = random.choice(Enemy_Names)
 Enemy_Health = random.randint(100,200)
 
 # Print the Information about the Enemy_Health
-
+print(f"{Enemy_Name} has appeared with {Enemy_Health} Health!")
 
 # -------------------------------------------------------------
 while Player_Health > 0 and Enemy_Health > 0:
-    # Display current health of the Player and Enemy
-    
-    # Get the Enemy's random choice
-    Enemy_choice = random.
+    print(f"{Player_Name} has {Player_Health} HP.")
+    print(f"{Enemy_Name} has {Enemy_Health} HP.")
 
-    # Get the Player's choice
-    Player_choice = int(input("Choose your Move: Attack (1), Counter (2), Heal (3)"))
+    Enemy_choice = random.randint(1, 3)
+    Player_choice = input("Choose your Move: Attack (1), Counter (2), Heal (3)")
     
     # Player Attacked (1)?
     if Player_choice == 1:
@@ -49,17 +47,24 @@ while Player_Health > 0 and Enemy_Health > 0:
         print(f"You healed yourself! You gain 10 HP.")
 
     # Enemy Attacked (1)?
-    
+    if Enemy_choice == 1:
         # Player Countered (2)? Enemy loses 15 HP
-    
+        if Enemy_choice == 2:
+            Enemy_Health -= 15
+            print(f"{Enemy_Name} attacked, but you countered! {Enemy_Name} loses 15 HP.")
         # Player did not counter? Player loses 10 HP
+        else:
+            Enemy_Health -= 10
+            print(f"{Enemy_Name} attacked you! You lose 10 HP.")
     
     # Enemy Healed (3)?
-    
+    if Enemy_choice == 3:
+        Enemy_Health += 10
+        print(f"{Enemy_Name} healed itself! It gains 10 HP.")
 
 
 # Determine the Winner: who has more health?
 if Player_Health > Enemy_Health:
-    print(f"")
+    print(f"{Player_Name}, you are the winner!")
 else:
-    print(f"")
+    print(f"Sorry {Player_Name}, you lost!")
