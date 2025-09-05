@@ -40,10 +40,11 @@ public class Complete2DPlayerController : MonoBehaviour
         rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
 
         // Handle Player Jumping (Space)
-        if (Input.GetButtonDown(KeyCode.Space) && jumpCount > 0)
+        if (Input.GetKeyDown(KeyCode.Space) && jumpCount > 0)
         {
             // Add Jump Force to the Rigidbody2D
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            jumpCount--;
             if (jumpSound)
             {
                 AudioSource.PlayClipAtPoint(jumpSound, transform.position);
@@ -54,7 +55,7 @@ public class Complete2DPlayerController : MonoBehaviour
         if (canSprint)
         {
             // Handle Player Sprinting
-            if (Input.GetButton(KeyCode.LeftShift))
+            if (Input.GetKey(KeyCode.LeftShift))
             {
                 rb.velocity = new Vector2(moveInput * moveSpeed * sprintMultiplier, rb.velocity.y);
             }
