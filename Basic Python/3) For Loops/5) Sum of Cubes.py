@@ -7,6 +7,10 @@ Total =
     # On each loop, add the input number to the total
 
 
+    # Calculate the cube of the number (number * number * number)
+
+
+    # Add the cube to the total
 
 
 # Print the Final Total
