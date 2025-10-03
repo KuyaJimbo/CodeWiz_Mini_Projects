@@ -1,0 +1,222 @@
+Project Overview:
+This guide will teach you how to create a game where players control a character that can run, jump, and place defensive towers to fight off waves of enemies. Think of it as a mix between Mario and Plants vs. Zombies!
+============================================================================
+
+Phase 1: Project Setup
+
+Step 1: Create a New Unity Project
+1. Open Unity Hub
+2. Click "New Project"
+3. Select "2D (URP)" template (Universal Render Pipeline for better performance)
+4. Name your project (e.g., "PlatformerTowerDefense")
+5. Click "Create Project"
+
+============================================================================
+
+Step 2: Set Up Your Project Structure
+
+Create folders to keep organized:
+Right-click in Project window → Create → Folder
+Create these folders:
+
+- Scripts
+- Sprites
+- Prefabs
+- Scenes
+- Materials
+
+============================================================================
+
+Phase 2: Player Movement (Platformer Mechanics)
+
+Step 3: Create the Player Character
+
+Create the Player GameObject:
+
+- Right-click in Hierarchy → 2D Object → Sprite → Square (or import your own)
+- Rename it to "Player"
+- Scale it appropriately (e.g., X: 1, Y: 1.5 for a character-like shape)
+- Change the sprite color in the Sprite Renderer component
+
+Add Physics:
+
+- Select Player → Add Component → Rigidbody 2D
+- Set these Rigidbody 2D settings:
+Gravity Scale: 3
+Constraints: Check "Freeze Rotation Z" (prevents the player from rotating)
+Collision Detection: Continuous
+
+Add Component → Box Collider 2D
+Click "Edit Collider" to adjust size to match your sprite
+
+
+Step 4: Create Player Movement Script
+Create a new C# script called PlayerController:
+
+
+Attach and Configure:
+1. Drag the script onto the Player GameObject
+2. Create a Ground Check point:
+    - Right-click Player → Create Empty
+    - Name it "GroundCheck"
+    - Position it at the player's feet (Y: -0.75 or so)
+
+3. Drag GroundCheck into the "Ground Check" field in the inspector
+4. Set Ground Layer (we'll create this next)
+
+Step 5: Create Ground/Platform
+
+Create a Layer:
+1. Top-right of Inspector → Layers → Edit Layers
+2. Add a new layer called "Ground"
+
+Create Ground:
+1. Right-click Hierarchy → 2D Object → Sprite → Square
+2. Rename to "Ground"
+3. Scale it (X: 10, Y: 1)
+4. Add Component → Box Collider 2D
+5. Set its Layer to "Ground"
+6. Change color to brown/green
+
+Finish Player Setup:
+Select Player
+In PlayerController, set Ground Layer to "Ground"
+
+============================================================================
+
+Phase 3: Camera Follow
+
+Step 6: Camera Controller
+Create a script called CameraFollow:
+
+Attach to Camera:
+1. Select Main Camera
+2. Add the CameraFollow script
+3. Drag Player into the Player field
+
+============================================================================
+
+Phase 4: Tower Defense Mechanics
+
+Step 7: Resource System
+Create a script called ResourceManager:
+
+
+Step 8: Create Tower Placement System
+Create a script called TowerPlacer:
+
+
+Step 9: Create a Basic Tower
+Create Tower GameObject:
+1. Right-click Hierarchy → 2D Object → Sprite → Square
+2. Name it "Tower"
+3. Scale it (X: 1, Y: 1.5)
+4. Change color to blue
+5. Add Component → Box Collider 2D (set as Trigger)
+Create a script called Tower:
+
+
+Setup Tower:
+1. Create an empty child of Tower called "FirePoint" (position it at the top)
+2. Drag Tower into Prefabs folder to make it a prefab
+3. Delete the Tower from the scene
+4. Attach TowerPlacer script to Player
+5. Drag Tower prefab into Tower Prefab field
+
+============================================================================
+
+Phase 5: Enemies and Combat
+
+Step 10: Create Projectile
+Create Projectile:
+1. Create a 2D Sprite → Circle
+2. Name it "Projectile"
+3. Scale it small (X: 0.3, Y: 0.3)
+4. Add Rigidbody 2D (Gravity Scale: 0)
+5. Add Circle Collider 2D (set as Trigger)
+Create script called Projectile:
+Make it a prefab and assign to Tower's Projectile Prefab field.
+
+Step 11: Create Enemy
+Create Enemy GameObject:
+1. Create 2D Sprite → Square (Or import your own)
+2. Name it "Enemy"
+3. Change color to red
+4. Add Rigidbody 2D (Gravity Scale: 0, Freeze Rotation Z)
+5. Add Box Collider 2D
+6. Tag it as "Enemy" (Create new tag if needed)
+Create script called Enemy:
+
+
+Create Waypoint System:
+1. Create Empty GameObject called "Waypoints"
+2. Create 3-5 Empty children, name them "Waypoint1", "Waypoint2", etc.
+3. Position them to create a path through your level
+Make Enemy a prefab.
+
+============================================================================
+
+Phase 6: Wave System
+
+Step 12: Wave Manager
+Create script called WaveManager:
+
+Setup Wave Manager:
+1. Create Empty GameObject called "WaveManager"
+2. Attach script
+3. Set up waves in inspector
+4. Create a spawn point (Empty GameObject positioned at the start of your waypoint path)
+
+============================================================================
+
+Phase 7: Game Manager
+
+Step 13: Create Game Manager
+Create script called GameManager:
+
+============================================================================
+
+Phase 8: UI Setup
+Step 14: Create UI
+
+Create Canvas:
+1. Right-click Hierarchy → UI → Canvas
+2. Add UI elements:
+
+Coins Text:
+1. Right-click Canvas → UI → Text - TextMeshPro (or Legacy Text)
+2. Name it "CoinsText"
+3. Position top-left
+4. Set font size to 24
+
+Health Text:
+1. Duplicate CoinsText
+2. Rename to "HealthText"
+3. Position top-right
+
+Game Over Panel:
+1. Right-click Canvas → UI → Panel
+2. Name it "GameOverPanel"
+3. Add child: UI → Text for "Game Over" message
+4. Add child: UI → Button for "Restart"
+5. Link RestartGame() method to button
+
+Connect UI to Managers:
+1. Drag texts to ResourceManager and GameManager respectively
+2. Attach TowerPlacer to Player if not already
+
+============================================================================
+
+- Common Issues and Solutions -
+
+Problem: Player falls through ground
+    -Solution: Make sure ground has a Collider 2D
+
+Problem: Towers don't shoot
+    -Solution: Check that enemies are tagged "Enemy" and within range
+
+Problem: UI doesn't update
+    -Solution: Verify references are connected in Inspector
+
+Problem: Game won't restart
+    -Solution: Make sure Time.timeScale is reset to 1
