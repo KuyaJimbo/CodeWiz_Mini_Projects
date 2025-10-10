@@ -11,3 +11,11 @@ Total =
 
 # Print the Final Total
 
+'''
+Total = 0
+
+for i in range(10):
+  Total += int(input())
+
+print(Total)
+'''

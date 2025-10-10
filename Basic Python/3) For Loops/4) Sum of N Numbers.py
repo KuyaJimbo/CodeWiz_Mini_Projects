@@ -12,3 +12,12 @@ N =
 
 # Print the Final Total
 
+'''
+Total = 0
+N = int(input())
+
+for i in range(N):
+  Total += int(input())
+
+print(Total)
+'''
